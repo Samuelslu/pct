@@ -48,6 +48,7 @@ stage('Full tests') {
     unstash name: 'testng-10.2-64-Linux'
     unstash name: 'testng-11.6-Linux'
     unstash name: 'testng-11.7-Linux'
+    unstash name: 'testng-12.0-Linux'
     step([$class: 'Publisher', reportFilenamePattern: 'testng-results-*.xml'])
   }
 }
